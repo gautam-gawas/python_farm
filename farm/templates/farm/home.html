@@ -1,0 +1,44 @@
+{% load static %}
+{% load table_tags %}
+
+<link rel="stylesheet" href="//cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>farmer </title>
+    </head>
+    <body>
+        <div class="container" style="margin-top: 10px">
+            <h1>farmers who are growing a crop </h1>
+            <br />
+            {% render_table farmer_table %}
+        </div>
+
+        <div class="container" style="margin-top: 10px">
+            <h1>Schedules due for today / tomorrow </h1>
+            <br />
+            {% render_table schedule_table %}
+        </div>
+
+
+
+        <div class="container" style="margin-top: 10px">
+            <h1> Bill of materials for a single farmer </h1>
+            <br />
+            {% render_table price_table %}
+        </div>
+
+
+    <div class="container" style="margin-top: 10px">
+            <h1> Schedules dues for Farms </h1>
+            <br />
+            {% render_table due_table %}
+        </div>
+
+
+    </body>
+</html>
